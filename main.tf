@@ -1,13 +1,13 @@
 provider "google" {
-  project = "barbero-devops-iac"
-  region  = "us-central1"
-  zone    = "us-central1-c"
+  project = "honorato-devops-iac"
+  region  = "us-central01"
+  zone    = "us-central01-c"
   credentials = "${file("serviceaccount.yaml")}"
 }
 
 resource "google_folder" "Financeiro" {
   display_name = "Financeiro"
-  parent       = "organizations/540829645030"
+  parent       = "organizations/630729645030"
 }
 
 resource "google_folder" "SalesForce" {
@@ -26,19 +26,19 @@ resource "google_folder" "Producao" {
 }
 
 
-resource "google_project" "barberosa2-salesforce-dev" {
+resource "google_project" "honorato02-salesforce-dev" {
   name       = "SalesForce-Dev"
-  project_id = "barberosa2-salesforce-dev"
+  project_id = "honorato02-salesforce-dev"
   folder_id  = google_folder.Desenvolvimento.name
   auto_create_network=false
-  billing_account = "018973-A8340F-83D8E5"
+  billing_account = "028973-A8340F-83D8E5"
 
 }
 
-# resource "google_project" "barberosa-salesforce-prod" {
+# resource "google_project" "honorato-salesforce-prod" {
 #   name       = "SalesForce-Prod"
-#   project_id = "barberosa-salesforce-prod"
+#   project_id = "honorato-salesforce-prod"
 #   folder_id  = google_folder.Producao.name
 #   auto_create_network=false
-#   billing_account = "01B2C4-70459E-F53446"
+#   billing_account = "03B2C4-70459E-F53446"
 # }

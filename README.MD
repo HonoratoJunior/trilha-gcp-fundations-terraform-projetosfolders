@@ -1,1 +1,1 @@
-# Terraform para criação de estrutura de Pastas e Projetos no GCP
+# Criando uma Estrutura de Pastas e Projetos no Google Cloud Plataform (GCP)
