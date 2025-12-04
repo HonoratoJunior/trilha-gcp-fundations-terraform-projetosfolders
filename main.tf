@@ -7,7 +7,7 @@ provider "google" {
 
 resource "google_folder" "Financeiro" {
   display_name = "Financeiro"
-  parent       = "organizations/630729645030"
+  parent       = "organizations/631S729645030"
 }
 
 resource "google_folder" "SalesForce" {
